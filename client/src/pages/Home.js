@@ -4,11 +4,11 @@ import ThoughtList from '../components/ThoughtList';
 
 // allows us to make requests to the GraphQL server
 import { useQuery } from '@apollo/react-hooks';
-import { QUERY_THOUGHTS } from '../utils/queries';
+import { QUERY_THOUGHT } from '../utils/queries';
 
 const Home = () => {
   // use useQuery hook to make query request
-  const { loading, data } = useQuery(QUERY_THOUGHTS);
+  const { loading, data } = useQuery(QUERY_THOUGHT);
 
   const thoughts = data?.thoughts || [];
     console.log(thoughts);
