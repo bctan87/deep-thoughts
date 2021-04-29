@@ -33,8 +33,10 @@ function App() {
               <Route exact path="/" component={Home} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
-              <Route exact path="/profile" component={Profile} />
-              <Route exact path="/thought" component={SingleThought} />
+              
+              {/* /profile and /profile/myUsername will both render the Profile component. */}
+              <Route exact path="/profile/:username?" component={Profile} />
+              <Route exact path="/thought/:id" component={SingleThought} />
 
               <Route component={NoMatch} />
             </Switch>
